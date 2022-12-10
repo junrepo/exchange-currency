@@ -1,0 +1,12 @@
+/* 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 중앙 배치 */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
