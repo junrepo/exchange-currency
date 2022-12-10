@@ -1,12 +1,77 @@
+html, body {
+    height: 100%;
+}
+
 /* 스타일 초기화 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /* 중앙 배치 */
 .container {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+/* 드롭다운 버튼 */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    width: 160px;
+    height: 30px;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.unit {
+    padding-left: 14px;
+}
+
+/* 드롭다운 메뉴의 부모 */
+.dropdown {
+    position: relative;
+}
+
+/* 드롭다운 내용 (기본으로 감춰짐) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* 드론다운 메뉴 */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+}
+
+/* 드롭다운에 hover했을때 메뉴의 배경색 변경 */
+.dropdown-content a:hover { background-color: #f1f1f1; }
+
+/* 드롭다운에 hover했을때 메뉴가 보여짐 */
+.dropbtn:hover + .dropdown-content {
+    display: block;
+}
+/* 드롭다운에 hover했을때 버튼 색 변경*/
+.dropbtn:hover {
+    background-color: #3e8e41;
+}
+
+/* 환율 input */
+.currency-input {
+    display: block;
+    width: 96.5%;
+    height: 23px;
+    margin-bottom: 20px;
 }
