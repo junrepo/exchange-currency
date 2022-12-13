@@ -1,0 +1,109 @@
+html, body {
+  height: 100%;
+}
+
+/* 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;  
+}
+
+/* 컨테이너 중앙 정렬 */
+.container {
+  height: 100%;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 컨텐츠 영역 */
+.content-area {
+  height: 60%;
+  margin-top: 10px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding-top: 5px;
+}
+
+/* 사이드 바 */
+.sidebar {
+  width: 34%;
+  float: left;
+}
+
+/* 메인 영역 */
+.main-area {
+  width: 66%;
+  float: left;
+}
+
+/* 클리어 픽스 */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1;
+}
+
+/* 환전 div 1, 2 중앙 정렬 */
+.main-area {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.currency-box {
+  margin-top: 10px;
+}
+
+/* 드롭다운 */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 7px 17px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 7px 17px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+

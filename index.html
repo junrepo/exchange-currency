@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="container">
+	
+	<!-- 감싸는 컨테이너 -->
+	<div class="container">
+		<!-- 타이틀 -->
+		<header>
+			<h1>환전 계산기</h1>
+			<p>간단한 환전 기능이 있는 계산기</p>
+		</header>
 
-        <div class="currency-box">
-            <div class="dropdown">
-                <button class="dropbtn">USD</button>
-                <div class="dropdown-content from-menu">
-                    <a href="#">USD</a>
-                    <a href="#">KRW</a>
-                    <a href="#">VND</a>
-                </div>
-            </div>
-            <div class="input-box">
-                <input type="text" class="amount-box">
-                <div class="result from-result">달러</div>
-            </div>
-        </div>
-        
-        <span class="equal-sign">=</span>
+		<!-- 감싸는 컨텐츠 영역 -->
+		<div class="content-area group">
+			<!-- 사이드 바-->
+			<aside class="sidebar">
+				<a href="#">환전 계산기</a></li>
+			</aside>
+		
+			<!-- 메인 영역 -->
+			<div class="main-area">
 
-        <div class="currency-box">
-            <div class="dropdown">
-                <button class="dropbtn">USD</button>
-                <div class="dropdown-content to-menu">
-                    <a href="#">USD</a>
-                    <a href="#">KRW</a>
-                    <a href="#">VND</a>
-                </div>
-            </div>
-            <div class="input-box">
-                <input type="text" class="amount-box">
-                <div class="result to-result">달러</div>
-            </div>
-        </div>
+				<!-- 환전 div 1-->
+				<div class="currency-box">
+					<div class="dropdown">
+						<button class="dropbtn">USD</button>
+						<div class="dropdown-content">
+							<a href="#">USD</a>
+							<a href="#">KRW</a>
+							<a href="#">VND</a>
+						</div>
+					</div>
+					<div class="input-box">
+						<input type="text">
+						<div>달러</div>
+					</div>
+				</div>
+				<!-- / 환전 앱 -->
 
-    </div>
-    <script src="main.js"></script>
+				<!-- 환전 div 2-->
+				<div class="currency-box">
+					<div class="dropdown">
+						<button class="dropbtn">USD</button>
+						<div class="dropdown-content">
+							<a href="#">USD</a>
+							<a href="#">KRW</a>
+							<a href="#">VND</a>
+						</div>
+					</div>
+					<div class="input-box">
+						<input type="text">
+						<div>달러</div>
+					</div>
+				</div>
+				<!-- / 환전 앱 -->
+				
+			</div>
+		</div>
+		<!-- / 컨텐츠 영역 -->
+
+		<!-- 푸터 -->
+		<footer>
+			<p>푸터 영역</p>
+		</footer>
+	</div>
+	<!-- / 컨테이너 -->
+	
+	
 </body>
 </html>
