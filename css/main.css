@@ -1,3 +1,12 @@
+html {
+  background-color: #869960;
+}
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 87%;
+}
+
 html, body {
   height: 100%;
 }
@@ -20,14 +29,34 @@ a {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #fff;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+/* 헤더 영역 */
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #333;
+}
+
+header h1 {
+  font-weight: normal;
+  font-size: 165%;
+}
+
+header p {
+  margin-top: 3px;
 }
 
 /* 컨텐츠 영역 */
 .content-area {
-  height: 60%;
+  height: 70%;
   margin-top: 10px;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border-top: 2px solid #e5e9dc;
+  border-bottom: 2px solid #e5e9dc;
   padding-top: 5px;
 }
 
@@ -35,12 +64,23 @@ a {
 .sidebar {
   width: 34%;
   float: left;
+  padding-left: 5px;
+  box-sizing: border-box;
 }
 
 /* 메인 영역 */
 .main-area {
   width: 66%;
   float: left;
+}
+
+/* 푸터 */
+footer {
+  text-align: center;
+  font-size: 85%;
+  color: #333;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* 클리어 픽스 */
@@ -70,7 +110,7 @@ a {
 
 /* 드롭다운 */
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: #70bd6c;
   color: white;
   padding: 7px 17px;
   font-size: 16px;
