@@ -21,7 +21,7 @@
 		<div class="content-area group">
 			<!-- 사이드 바-->
 			<aside class="sidebar">
-				<a href="#">환전 계산기</a></li>
+				<li><a href="#">환전 계산기</a></li>
 			</aside>
 		
 			<!-- 메인 영역 -->
@@ -37,9 +37,9 @@
 							<a href="#">VND</a>
 						</div>
 					</div>
-					<div class="input-box">
-						<input type="text">
-						<div>달러</div>
+					<div class="input-box input">
+						<input type="text" id="from-input">
+						<div><span id="from-result">달러</span></div>
 					</div>
 				</div>
 				<!-- / 환전 앱 -->
@@ -55,8 +55,8 @@
 						</div>
 					</div>
 					<div class="input-box">
-						<input type="text">
-						<div>달러</div>
+						<input type="text" id="to-input">
+						<div><span id="to-result">달러</span></div>
 					</div>
 				</div>
 				<!-- / 환전 앱 -->

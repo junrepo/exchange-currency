@@ -16,7 +16,7 @@
     7. 반대로 밑에 박스에서 숫자를 바꿔도 위에 박스에 환율이 적용이 된다!
 */
 
-let currencyRatio = {
+const currencyRatio = {
 
     USD : {
         KRW: 1310.38,
@@ -32,7 +32,7 @@ let currencyRatio = {
         unit: "원"
     },
 
-    VDN: {
+    VND: {
         KRW: 0.056,
         USD: 0.000043,
         VND: 1,
@@ -42,20 +42,48 @@ let currencyRatio = {
 let fromCurrency = 'USD';
 let toCurrency = 'USD';
 
+const fromResult = document.querySelector("#from-result");
+const toResult = document.querySelector("#to-result");
+const fromInput = document.querySelector("#from-input");
+const toInput = document.querySelector("#to-input");
+
 document.querySelectorAll("#from-currency-list a")
 .forEach(menu=>menu.addEventListener("click", function(){
-    // 1. 버튼을 가져온다
-    // 2. 버튼의 값을 바꾼다
     document.getElementById("from-button").textContent = this.textContent;
-    // 3. 선택된 currency값을 변수에 저장해준다.
     fromCurrency = this.textContent;
-    console.log(fromCurrency);
+    exchange();
 }));
 
 document.querySelectorAll("#to-currency-list a")
 .forEach(menu=>menu.addEventListener("click", function(){
     document.getElementById("to-button").textContent = this.textContent;
     toCurrency = this.textContent;
-    console.log(toCurrency);
-}))
+    fromInput.value = inComing * currencyRatio[toCurrency][fromCurrency];
+}));
+
+// FROM --> TO
+fromInput.addEventListener('input', function(){
+    exchange();
+});
+
+// TO --> FROM
+toInput.addEventListener('input', function(){
+   let inComing = toInput.value;
+   fromInput.value = inComing * currencyRatio[toCurrency][fromCurrency];
+});
+
+function exchange() {
+    let inComing = parseInt(fromInput.value);
+    console.log(typeof inComing);
+    if(inComing !== 'NaN' && inComing !== 0) {
+        console.log(inComing);
+        console.log('hi');
+        toInput.value = inComing * currencyRatio[fromCurrency][toCurrency];
+    }
+}
+
+
+
+
+
 
